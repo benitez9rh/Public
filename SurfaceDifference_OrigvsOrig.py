@@ -40,12 +40,13 @@ import pyvista as pv
 from pyvista import examples
 from Euler3DRotation import rotate_np
 
-# set the colormap and centre the colorbar. Thanks to http://chris35wills.github.io/matplotlib_diverging_colorbar/
+
 class MidpointNormalize(colors.Normalize):
 	"""
 	Normalise the colorbar so that diverging bars work there way either side from a prescribed midpoint value)
 
 	e.g. im=ax1.imshow(array, norm=MidpointNormalize(midpoint=0.,vmin=-100, vmax=100))
+    # set the colormap and centre the colorbar. Thanks to http://chris35wills.github.io/matplotlib_diverging_colorbar/
 	"""
 	def __init__(self, vmin=None, vmax=None, midpoint=None, clip=False):
 		self.midpoint = midpoint
